@@ -1,0 +1,149 @@
+* { box-sizing: border-box;}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.main {
+    padding-bottom: 50px;
+}
+
+.header {
+    max-width: 900px;
+    margin: auto;
+   
+
+}
+
+.img {
+    margin: 40px auto;
+}
+
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    display: flex;
+    margin-top: 30px;
+}
+
+.container .leftside {
+    flex: 1;
+    margin-right: 40px;
+}
+
+.container .leftside h1 {
+    margin: 0;
+    font-size: 40px;
+    color: #3a4b5c;
+}
+
+.container .leftside p {
+    font-size: 16px;
+    margin-bottom: 40px;
+    color:#6a7d8b;
+}
+
+.container .rightside{
+    flex: 1;
+    margin-left: 40px;
+    display: flex;
+}
+
+.container .rightside .grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.input {
+    border-color: rgba(128, 128, 128, 0.123);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.329);
+    margin-bottom: 10px;
+    padding: 10px 5px;
+    width: 100%;
+    border: 0;
+}
+
+.input:disabled {
+    opacity: 0.5;
+}
+
+.hr {
+    background-color: rgba(92, 93, 97, 0.021);
+    height: 2px;
+}
+
+.button {
+    width: 100%;
+    height: 50px;
+    border: none;
+    background-color: #227C9D;
+    color: white;
+    border-radius: 5px;
+    font-size: 15px;
+    transition: all ease .3s;
+
+}
+
+.button:hover {
+   opacity: .7;
+}
+
+.button:disabled {
+    opacity: 0.5;
+}
+
+.container .rightside .rightBig {
+    flex: 1;
+    display: flex;
+}
+
+.yourImc {
+    font-size: 17px;
+    margin: 15px 0 50px 0;
+}
+
+.container .rightside .rigthArrow {
+    position: absolute;
+    background-color: #227C9D;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+@media (max-width:770px) {
+    header {
+        padding: 0 20px;
+    }
+    .container {
+        padding: 0 20px;
+        flex-direction: column;
+    }
+
+    .container .leftside {
+        margin-right: 0;
+    }
+    .container .rightside {
+        margin-left: 0;
+        margin-top: 50px;
+    }
+    .container .rightside .rigthArrow {
+        border-radius: 10px;
+    }
+
+}
+
+@media (max-width:430px) {
+    .container .rightside .grid {
+        grid-template-columns: 1fr;
+    }
+
+
+}
